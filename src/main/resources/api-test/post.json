@@ -1,0 +1,33 @@
+{
+  "id": "20d5395a-eacc-42f0-a205-c7694b2288f4",
+  "title": "Prayer night",
+  "categories": [
+    {
+      "id": "ee530729-2bf4-458e-9443-64b5fdca0020",
+      "name": "Concert"
+    },
+    {
+      "id": "803930bc-37ae-474c-8d45-3987f04d9e13",
+      "name": "Church"
+    }
+  ],
+  "image": "https://res.cloudinary.com/dlcsm4ukd/image/upload/v1774468695/event_posts/qokeycm3tux8lqaoc24n.png",
+  "phone": null,
+  "email": null,
+  "location": null,
+  "addressDto": null,
+  "link": null,
+  "eventDates": null,
+  "description": null,
+  "fee": null,
+  "frequencyDto": {
+    "daily": false,
+    "weekly": false,
+    "monthly": false,
+    "yearly": false
+  },
+  "author": "c255e419-94ef-4d50-b2af-45b830eca597",
+  "likedBy": null,
+  "bookmarkedBy": null,
+  "createdAt": "2026-03-25T20:58:15.755383"
+}

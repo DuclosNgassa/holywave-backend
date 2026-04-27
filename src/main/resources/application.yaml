@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: holywave
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${JWK_RESOURCE_SERVER}
+server:
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    root: INFO
