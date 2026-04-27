@@ -15,7 +15,7 @@ jobs:
 
       - name: Set image name
         id: vars
-        run: echo "image_name=my-docker-image:latest" >> $GITHUB_OUTPUT
+        run: echo "holywave-app:$(date +%s)" >> $GITHUB_OUTPUT
 
       - name: Use image name
         run: echo "Image is ${{ steps.vars.outputs.image_name }}"
@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -t ${{vars.DOCKERHUB_USERNAME}}/${{ steps.vars.outputs.image_name }}
+        run: docker build -t ${{vars.DOCKERHUB_USERNAME}}/${{ steps.vars.outputs.image_name }} .
 
       - name: Push Image
         run: docker push ${{vars.DOCKERHUB_USERNAME}}/${{ steps.vars.outputs.image_name }}
