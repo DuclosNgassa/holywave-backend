@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres         # Default superuser
+      POSTGRES_PASSWORD: postgres # Password for the superuser
+      POSTGRES_DB: holywave       # Database to create automatically
+    ports:
+      - "5432:5432"                 # Host:Container port mapping
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistent storage
+      #- ./init-scripts:/docker-entrypoint-initdb.d # Optional: custom SQL scripts
+  grafana-lgtm:
+    image: 'grafana/otel-lgtm:latest'
+    ports:
+      - '3000:3000'
+      - '4317'
+      - '4318'
+volumes:
+  postgres_data:
