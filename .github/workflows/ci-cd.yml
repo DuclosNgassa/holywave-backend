@@ -55,4 +55,4 @@ jobs:
             docker stop holywave-app || true
             docker rm holywave-app || true
             docker pull ${{vars.DOCKERHUB_USERNAME}}/${{ steps.image.outputs.IMAGE_NAME }}
-            docker run -d --name holywave-app -p 8080:8080  ${{vars.DOCKERHUB_USERNAME}}/${{ steps.image.outputs.IMAGE_NAME }} 
+            docker run -d --name holywave-app -p 8080:8080 --env-file .env  ${{vars.DOCKERHUB_USERNAME}}/${{ steps.image.outputs.IMAGE_NAME }} 
